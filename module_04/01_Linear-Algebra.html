@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linear Algebra Introduction &#8212; Computational Mechanics</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -58,7 +58,10 @@
     <link rel="next" title="Gauss Elimination" href="02_Gauss_elimination.html" />
     <link rel="prev" title="Computational Mechanics 4 - Linear Algebra" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -74,6 +77,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/comp-mech-logo.svg" class="logo" alt="logo">
       
@@ -292,6 +299,20 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../how-to/polyfit.html">
      Creating a quadratic fit on random data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how-to/for-loops.html">
+     How to use a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loop?
+     <em>
+      in Python
+     </em>
     </a>
    </li>
    <li class="toctree-l2">
@@ -574,21 +595,16 @@ x_{3}\end{array}\right]=\left[\begin{array}{c}
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="o">-</span><span class="mi">19</span><span class="p">,</span><span class="mi">12</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">12</span><span class="p">]])</span>
 <span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span><span class="p">])</span>
 
-<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;[</span><span class="si">{:5.1f}</span><span class="s1"> </span><span class="si">{:5.1f}</span><span class="s1"> </span><span class="si">{:5.1f}</span><span class="s1">] </span><span class="si">{}</span><span class="s1"> [</span><span class="si">{:3.1f}</span><span class="s1">] </span><span class="si">{}</span><span class="s1"> [</span><span class="si">{:5.1f}</span><span class="s1">]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1882</span><span class="o">/</span><span class="mf">2400450210.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;[</span><span class="si">{:5.1f}</span><span class="s1"> </span><span class="si">{:5.1f}</span><span class="s1"> </span><span class="si">{:5.1f}</span><span class="s1">] </span><span class="si">{}</span><span class="s1"> [</span><span class="si">{:3.1f}</span><span class="s1">] </span><span class="si">{}</span><span class="s1"> [</span><span class="si">{:5.1f}</span><span class="s1">]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-
-<span class="ne">NameError</span>: name &#39;x&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ -7.0   3.0   0.0] * [3.9] = [-20.0]
+[  7.0 -19.0  12.0] * [2.3] = [  0.0]
+[  0.0   4.0 -12.0] * [1.4] = [ -8.0]
 </pre></div>
 </div>
 </div>
@@ -643,6 +659,14 @@ c_{3}\end{array}\right]=\left[\begin{array}{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matrix A:	 vector b:
+[-7  3  0] 	 -5
+[  7 -19  12] 	 0
+[  0   4 -12] 	 -8
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now, you can solve for <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> with the function <code class="docutils literal notranslate"><span class="pre">np.linalg.solve</span></code>.
 This is an advanced linear algebra solver that incorporates some ideas
@@ -656,6 +680,13 @@ we just want to understand the inputs and outputs</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c1 = </span><span class="si">{:.2f}</span><span class="s1"> mg/m^3,</span><span class="se">\n</span><span class="s1">c2 = </span><span class="si">{:.2f}</span><span class="s1"> mg/m^3,</span><span class="se">\n</span><span class="s1">c3 = </span><span class="si">{:.2f}</span><span class="s1"> mg/mm^3&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c1 = 1.18 mg/m^3,
+c2 = 1.08 mg/m^3,
+c3 = 1.03 mg/mm^3
 </pre></div>
 </div>
 </div>
@@ -677,6 +708,11 @@ we just want to understand the inputs and outputs</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 
 <span class="n">y</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3,)
 </pre></div>
 </div>
 </div>
@@ -742,6 +778,14 @@ exercise, and blood pressure of an individual (five dimensions).</p>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;external inputs&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;flow in at 1: </span><span class="si">{:.1f}</span><span class="s1"> g/s</span><span class="se">\n</span><span class="s1">flow in at 2: </span><span class="si">{:.1f}</span><span class="s1"> g/s</span><span class="se">\n</span><span class="s1">flow in at 3: </span><span class="si">{:.1f}</span><span class="s1"> g/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">out</span><span class="o">*-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>external inputs
+flow in at 1: 5.0 g/s
+flow in at 2: -0.0 g/s
+flow in at 3: 8.0 g/s
 </pre></div>
 </div>
 </div>
@@ -838,12 +882,29 @@ T_{3}\end{array}\right]=\left[\begin{array}{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A2 = 		 y2=
+[-2 -1  0  0] 	 -12.486091542192055
+[-2  1 -1  0] 	 -12.486091542192055
+[-2  0  1 -1] 	 -12.486091542192055
+[ 1  0  0 -1] 	 -9.81
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a=</span><span class="si">{:.2f}</span><span class="s1"> m/s/s</span><span class="se">\n</span><span class="s1">T1=</span><span class="si">{:.1f}</span><span class="s1"> N</span><span class="se">\n</span><span class="s1">T2=</span><span class="si">{:.1f}</span><span class="s1"> N</span><span class="se">\n</span><span class="s1">T3=</span><span class="si">{:.1f}</span><span class="s1"> N&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">x2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a=3.95 m/s/s
+T1=4.6 N
+T2=9.2 N
+T3=13.8 N
 </pre></div>
 </div>
 </div>
@@ -869,14 +930,35 @@ T_{3}\end{array}\right]=\left[\begin{array}{c}
 <li><p><span class="math notranslate nohighlight">\(x+y = 3\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(2x+2y=6\)</span></p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_sing</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
-<span class="n">y_sing</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A_sing</span><span class="p">,</span><span class="n">y_sing</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">A_sing</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_sing</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A_sing</span><span class="p">,</span><span class="n">y_sing</span><span class="p">)</span>
+
+<span class="go">---------------------------------------------------------------------------</span>
+<span class="go">LinAlgError                               Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-9-b58617395425&gt; in &lt;module&gt;</span>
+<span class="go">      1 A_sing = np.array([[1,1],[2,2]])</span>
+<span class="go">      2 y_sing = np.array([3,6])</span>
+<span class="go">----&gt; 3 np.linalg.solve(A_sing,y_sing)</span>
+
+<span class="go">&lt;__array_function__ internals&gt; in solve(*args, **kwargs)</span>
+
+<span class="go">~/.conda/envs/work/lib/python3.9/site-packages/numpy/linalg/linalg.py in solve(a, b)</span>
+<span class="go">    392     signature = &#39;DD-&gt;D&#39; if isComplexType(t) else &#39;dd-&gt;d&#39;</span>
+<span class="go">    393     extobj = get_linalg_error_extobj(_raise_linalgerror_singular)</span>
+<span class="go">--&gt; 394     r = gufunc(a, b, signature=signature, extobj=extobj)</span>
+<span class="go">    395 </span>
+<span class="go">    396     return wrap(r.astype(result_t, copy=False))</span>
+
+<span class="go">~/.conda/envs/work/lib/python3.9/site-packages/numpy/linalg/linalg.py in _raise_linalgerror_singular(err, flag)</span>
+<span class="go">     86 </span>
+<span class="go">     87 def _raise_linalgerror_singular(err, flag):</span>
+<span class="go">---&gt; 88     raise LinAlgError(&quot;Singular matrix&quot;)</span>
+<span class="go">     89 </span>
+<span class="go">     90 def _raise_linalgerror_nonposdef(err, flag):</span>
+
+<span class="go">LinAlgError: Singular matrix</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="singular-and-ill-conditioned-matrices">
@@ -910,12 +992,28 @@ T_{3}\end{array}\right]=\left[\begin{array}{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>d= 2e-16
+x = 0.0, y = 3.0
+d= 5e-16
+x = -1.0, y = 4.0
+d= 1e-15
+x = -0.4, y = 3.4
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:e}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cond</span><span class="p">(</span><span class="n">A_ill</span><span class="p">)))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:e}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">A_ill</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.045100e+15
+1.000000e+00
 </pre></div>
 </div>
 </div>
@@ -964,6 +1062,11 @@ T_{3}\end{array}\right]=\left[\begin{array}{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.045100e+15
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="id3">
@@ -990,12 +1093,29 @@ T_{3}\end{array}\right]=\left[\begin{array}{c}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.05263158 0.05       0.04761905]
+ [0.05       0.04761905 0.04545455]
+ [0.04761905 0.04545455 0.04347826]]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">u</span><span class="o">=</span><span class="n">lu</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:,</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:,</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.          0.          0.        ]
+ [ 0.54933688  1.          0.        ]
+ [-0.56294207 -0.45765178  1.        ]]
+[[-1.00444829e-11 -5.12050345e-11 -1.50120007e-10]
+ [ 0.00000000e+00  3.31182285e-13  1.83361576e-12]
+ [ 0.00000000e+00  0.00000000e+00 -5.09585397e-15]]
 </pre></div>
 </div>
 </div>
@@ -1057,8 +1177,8 @@ m_{4}g \end{array} \right]\)</span></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\dot{m}_1=0.1~kg/s\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\dot{m}_2=0.15~kg/s\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\dot{m}_3=0.17~kg/s\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\dot{m}_4=0.15~kg/s\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\dot{m}_3=0.12~kg/s\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\dot{m}_4=0.1~kg/s\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\dot{m}_5=0.02~kg/s\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\dot{m}_6=0.05~kg/s\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(C_p=1000~\frac{J}{kg-K}\)</span></p></li>
@@ -1110,36 +1230,27 @@ m_{4}g \end{array} \right]\)</span></p>
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="README.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Computational Mechanics 4 - Linear Algebra</p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Computational Mechanics 4 - Linear Algebra</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="02_Gauss_elimination.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Gauss Elimination</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="02_Gauss_elimination.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Gauss Elimination</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -1155,8 +1266,7 @@ m_{4}g \end{array} \right]\)</span></p>
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
